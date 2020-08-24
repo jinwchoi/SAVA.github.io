@@ -51,8 +51,7 @@
   <div class="section no-pad-bot" id="index-banner">
     <div class="container scrollspy" id="home">
 
-      <h4 class="header center black-text">Why Can't I Dance in the Mall?<br>
-      Learning to Mitigate Scene Bias in Action Recognition</h4>
+      <h4 class="header center black-text">Shuffle and Attend: Video Domain Adaptation</h4>
 
       <br>
 
@@ -62,11 +61,11 @@
         </h5>
 
         <h5 class="header col l3 m4 s12">
-          <div class="author"><a href="http://chengao.vision/" target="blank">Chen Gao</a></div>
+          <div class="author"><a href="https://grvsharma.com/" target="blank">Gaurav Sharma</a></div>
         </h5>
 
         <h5 class="header col l3 m4 s12">
-          <div class="author"><a href="https://josephcmessou.weebly.com/about.html" target="blank">Joseph Messou</a></div>
+          <div class="author"><a href="https://samschulter.github.io/" target="blank">Samuel Schulter</a></div>
         </h5>
 
         <h5 class="header col l3 m4 s12">
@@ -79,7 +78,7 @@
         </h5>
 
         <h6 class="row center">
-          <div>In Neural Information Processing Systems (NeurIPS), 2019</div>
+          <div>In European Conference on Computer Vision (ECCV), 2020</div>
         </h6>
 
       </div>
@@ -111,7 +110,7 @@
 
     <div class="row section scrollspy" id="abstract">
       <div class="title">Abstract</div>
-      Human activities often occur in specific scene contexts, e.g. playing basketball on a basketball court. Training a model using existing video datasets thus inevitably captures and leverages such bias (instead of using the actual discriminative cues). The learned representation may not generalize well to new action classes or different tasks. In this paper, we propose to mitigate scene bias for video representation learning. Specifically, we augment the standard cross-entropy loss for action classification with 1) an adversarial loss for scene types and 2) a human mask confusion loss for videos where the human actors are masked out. These two losses encourage learning representations that are unable to predict the scene types and the correct actions when there is no evidence. We validate the effectiveness of our method by transferring our pre-trained model to three different tasks, including action classification, temporal localization, and spatio-temporal action detection. Our results show consistent improvement over the baseline model without debiasing.
+      We address the problem of domain adaptation in videos for the task of human action recognition. Inspired by image-based domain adaptation, we can perform video adaptation by aligning the features of frames or clips of source and target videos. However, equally aligning all clips is sub-optimal as not all clips are informative for the task. As the first novelty, we propose an attention mechanism which focuses on more discriminative clips and directly optimizes for video-level (\cf clip-level) alignment. As the backgrounds are often very different between source and target, the source background-corrupted model adapts poorly to target domain videos. To alleviate this, as a second novelty, we propose to use the clip order prediction as an auxiliary task. The clip order prediction loss, when combined with domain adversarial loss, encourages learning of representations which focus on the humans and objects involved in the actions, rather than the uninformative and widely differing (between source and target) backgrounds. We empirically show that both components contribute positively towards adaptation performance. We report state-of-the-art performances on two out of three challenging public benchmarks, two based on the UCF and HMDB datasets, and one on Kinetics to NEC-Drone datasets. We also support the intuitions and the results with qualitative results.
     </div>
 
     <div class="row section scrollspy" id="paper">
